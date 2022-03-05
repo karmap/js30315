@@ -27,4 +27,21 @@ console.log('Búsqueda por id: ', porId );
 const mayor500 = productos.filter( producto => producto.precio > 500 )
 console.log('Búsqueda precio mayor a 500: ', mayor500 );
 
+// Otro ejemplo de map
+const numeros = [5,6,7,5,4,6,4]
+console.log( numeros.map( n => 'número: ' + n ) )
+console.log(numeros);
 
+
+const conSome = productos.some( producto => producto.titulo == 'iPhone' )
+console.log('Búsqueda por nombre con some(): ', conSome );
+
+const total = numeros.reduce( (acc, num) => acc + num , 0 )
+console.log('suma total: ', total);
+
+const stockTotal = productos.reduce( (acc, p) => acc + p.stock, 0 )
+console.log('Stock total: ', stockTotal);
+
+// const ids = productos.reduce( (acc, p) => `${acc},${p.id}` , '' )
+const ids = productos.map( p => p.id ).join(',')
+console.log(ids);
