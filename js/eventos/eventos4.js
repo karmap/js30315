@@ -7,4 +7,5 @@ enviar.onclick = e => {
     const parent = e.target.parentNode
     console.log( parent.children[0].value );
     console.log( parent.children[1].value );
+    console.log(this);
 }
